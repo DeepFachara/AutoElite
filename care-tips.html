@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Care Tips - AutoElite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2b3c;
+            --secondary: #e63946;
+            --accent: #457b9d;
+            --gradient: linear-gradient(135deg, #207ddb 0%, #314a63 100%);
+        }
+
+        .navbar {
+            background: var(--gradient);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+
+        .feature-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .key-factor {
+            text-align: center;
+            padding: 2rem 1rem;
+            transition: transform 0.3s;
+        }
+
+        .key-factor i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--gradient);
+            color: white;
+            padding: 20px 0;
+        }
+        .care-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .tip-card {
+            border-left: 4px solid var(--accent);
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car me-2"></i>AutoElite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="models.html">Car Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="care-tips.html">Car Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-login.html">
+                            Admin Panel
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search tips...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Maintenance Schedule -->
+    <section id="maintenance" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Regular Maintenance Schedule</h2>
+            
+            <div class="row">
+                <!-- Every 3,000-5,000 Miles -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <h5>Every 3,000-5,000 Miles</h5>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check text-success me-2"></i>Oil & filter change</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Tire rotation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Fluid level check</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Brake inspection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Every 15,000-30,000 Miles -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h5>Every 15,000-30,000 Miles</h5>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check text-success me-2"></i>Air filter replacement</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Fuel system cleaning</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Battery inspection</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Wheel alignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Every 30,000-60,000 Miles -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h5>Every 30,000-60,000 Miles</h5>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check text-success me-2"></i>Transmission fluid</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Coolant flush</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Spark plugs replacement</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Brake fluid change</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cleaning & Detailing Tips -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Cleaning & Detailing Guide</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-spray-can fa-2x text-info"></i>
+                            </div>
+                            <h4 class="text-center">Exterior Care</h4>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-sun text-warning me-2"></i>Washing</h6>
+                                <p class="mb-0">Wash every 2 weeks using pH-balanced car shampoo</p>
+                            </div>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-shield-alt text-success me-2"></i>Waxing</h6>
+                                <p class="mb-0">Apply wax every 3 months for UV protection</p>
+                            </div>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-wind text-primary me-2"></i>Chrome & Trim</h6>
+                                <p class="mb-0">Use dedicated cleaners for metal and plastic parts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-tools fa-2x text-warning"></i>
+                            </div>
+                            <h4 class="text-center">Quick Maintenance</h4>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-tire text-dark me-2"></i>Tire Pressure</h6>
+                                <p class="mb-0">Check monthly, maintain manufacturer's PSI</p>
+                            </div>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-vial text-danger me-2"></i>Fluid Levels</h6>
+                                <p class="mb-0">Inspect oil, coolant, brake fluid monthly</p>
+                            </div>
+                            <div class="tip-card">
+                                <h6><i class="fas fa-lightbulb text-warning me-2"></i>Lights & Signals</h6>
+                                <p class="mb-0">Test all lights weekly for safety</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Factors -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Why Regular Maintenance Matters</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="key-factor">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Safety First</h4>
+                        <p>Regular maintenance ensures your vehicle operates safely on the road.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="key-factor">
+                        <i class="fas fa-tag"></i>
+                        <h4>Cost Savings</h4>
+                        <p>Prevent expensive repairs by addressing issues early with routine care.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="key-factor">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Resale Value</h4>
+                        <p>Well-maintained vehicles retain higher value when it's time to sell.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="key-factor">
+                        <i class="fas fa-gas-pump"></i>
+                        <h4>Fuel Efficiency</h4>
+                        <p>Properly maintained cars run more efficiently, saving you money on fuel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+     <footer>
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2025 AutoElite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

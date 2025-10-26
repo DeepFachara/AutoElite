@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - AutoElite Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .admin-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+        }
+        .sidebar {
+            background: #34495e;
+            color: white;
+            min-height: 100vh;
+            padding: 0;
+        }
+        .sidebar .nav-link {
+            color: #bdc3c7;
+            padding: 0.8rem 1rem;
+            border-left: 3px solid transparent;
+        }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        .stats-card {
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="mb-0">AutoElite Admin Panel</h4>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-2"></i>Admin User
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="admin-login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 sidebar">
+                <div class="p-3">
+                    <h5><i class="fas fa-bars me-2"></i>Menu</h5>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-cars.html">
+                            <i class="fas fa-car me-2"></i>Car Management
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-inquiries.html">
+                            <i class="fas fa-envelope me-2"></i>Customer Inquiries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-testdrives.html">
+                            <i class="fas fa-calendar-check me-2"></i>Test Drives
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-users.html">
+                            <i class="fas fa-users me-2"></i>User Management
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-analytics.html">
+                            <i class="fas fa-chart-bar me-2"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-settings.html">
+                            <i class="fas fa-cog me-2"></i>Settings
+                        </a>
+                    </li>
+                    <li class="nav-item mt-4">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-external-link-alt me-2"></i>View Website
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 p-4">
+                <h2>Website Analytics</h2>
+                
+                <!-- Stats Overview -->
+                <div class="row mt-4">
+                    <div class="col-md-3 mb-3">
+                        <div class="card stats-card bg-primary text-white">
+                            <div class="card-body">
+                                <h5>Total Visitors</h5>
+                                <h3>1,247</h3>
+                                <small>+12% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card stats-card bg-success text-white">
+                            <div class="card-body">
+                                <h5>Page Views</h5>
+                                <h3>3,458</h3>
+                                <small>+8% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card stats-card bg-warning text-white">
+                            <div class="card-body">
+                                <h5>Conversion Rate</h5>
+                                <h3>4.2%</h3>
+                                <small>+1.5% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card stats-card bg-info text-white">
+                            <div class="card-body">
+                                <h5>Avg. Session</h5>
+                                <h3>3m 45s</h3>
+                                <small>+30s from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Cars -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5>Most Viewed Cars</h5>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Car Model</th>
+                                    <th>Views</th>
+                                    <th>Inquiries</th>
+                                    <th>Conversion Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Porsche 911 Turbo</td>
+                                    <td>324</td>
+                                    <td>18</td>
+                                    <td>5.6%</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW X3</td>
+                                    <td>287</td>
+                                    <td>15</td>
+                                    <td>5.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>Mercedes S-Class</td>
+                                    <td>256</td>
+                                    <td>12</td>
+                                    <td>4.7%</td>
+                                </tr>
+                                <tr>
+                                    <td>Range Rover Sport</td>
+                                    <td>234</td>
+                                    <td>10</td>
+                                    <td>4.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Traffic Sources -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5>Traffic Sources</h5>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <strong>Organic Search</strong>
+                                <div class="progress mt-1">
+                                    <div class="progress-bar bg-success" style="width: 45%">45%</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Direct</strong>
+                                <div class="progress mt-1">
+                                    <div class="progress-bar bg-primary" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <strong>Social Media</strong>
+                                <div class="progress mt-1">
+                                    <div class="progress-bar bg-info" style="width: 15%">15%</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <strong>Referral</strong>
+                                <div class="progress mt-1">
+                                    <div class="progress-bar bg-warning" style="width: 10%">10%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
